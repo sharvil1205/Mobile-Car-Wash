@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Car Wash: User</title>
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>Welcome</h1>
+
+    <form action="/userPage1" method="post">
+        <input type="text" name="place" placeholder="Search Place" required="">
+        <button>Search</button>
+    </form>
+
+    <form action="/viewAllPlaces.html" method="get">
+        <a href="viewAllPlaces.html">View All centres</a>
+    </form>
+
+    <br><br>
+    <form action="book" method="post">
+        <b><p id="p1">Book a place</p></b>
+        <input type="text" name="username" placeholder="Enter your Username" required="">
+        <input type="text" name="placeOfAppointment" placeholder="Place" required="">
+        <button>Book</button>
+    </form>
+
+    <form action="viewBookingStatus" method="post">
+        <br><b><p>View Booking Status</p></b>
+        <input type="text" name="username" placeholder="Enter your username" required="">
+        <button>View Booking Status</button>
+    </form>
+
+    <script>
+        document.getElementById("p1").innerHTML = user;
+    </script>
+</body>

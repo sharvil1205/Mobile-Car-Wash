@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Car Wash: Admin</title>
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>Admin Page</h1>
+    <b><p>Add Place</p></b>
+    <form action="/addPlace" method="post">
+        <input type="text" name="place" placeholder="Add a Place" required="">
+        <button>Add Place</button>
+    </form>
+
+    <br>
+    <a href="viewBookings.html">View Bookings</a>
+
+    <form action="acceptBooking" method="post" name="accept">
+      <br><button>Accept</button>    
+    </form>
+
+    <form action="rejectBooking" method="post">
+      <button>Reject</button>    
+    </form>
+
+</body>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>View Bookings</title>
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>All bookings</h1>
+    <table>
+        <tr>
+            <th>User</th>
+            <th>Place</th>
+            <th>Status</th>
+        </tr>
+        <tbody id="myTable"></tbody>
+    </table>
+
+    <script>
+        const connection = require('./database');
+        
+        var sql = `SELECT * from bookings`;
+        
+        connection.query(sql, function(err,result){
+            res = JSON.stringify(result);
+            buildTable(res);
+
+        function buildTable(data){
+            var table = document.getElementById('myTable');
+
+            for(var i=0; i<data.length; i++)
+            {
+                var row = `<tr>
+                                <td>${data[i].user}</td>
+                                <td>${data[i].place}</td>
+                                <td>${data[i].status}</td>
+                                <td><Button>Accept</Button></td>
+                            <tr>`
+                table.innerHTML += row;
+            }
+        }
+	})
+    </script>
+</body>
